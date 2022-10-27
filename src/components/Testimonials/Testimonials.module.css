@@ -1,0 +1,51 @@
+.imageSlide {
+	position: relative;
+}
+
+.imageSlide::after {
+	content: "";
+	position: absolute;
+	top: -5%;
+	right: -5%;
+	width: 100%;
+	height: 100%;
+	background-color: orange;
+	z-index: -1;
+	opacity: 0.9;
+}
+
+.imageSlide::before {
+	content: "";
+	position: absolute;
+	bottom: -5%;
+	left: -5%;
+	width: 100%;
+	height: 100%;
+	border: 1px solid orange;
+	z-index: -1;
+}
+
+.slideAnimation {
+	animation: slider 1s linear;
+}
+
+@keyframes slider {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
